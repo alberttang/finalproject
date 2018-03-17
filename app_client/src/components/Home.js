@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from "axios";
 import Quiz from "./Quiz";
 import Map from "./Map";
+import Question from './quiz/Questions';
+
 // import GoogleMap from "./maps/GoogleMap";
 
 class Home extends Component {
@@ -29,6 +31,9 @@ class Home extends Component {
             <div className="col-xs-6 col-sm-4"><Quiz/></div>
             <div className="clearfix visible-xs-block"></div>
             <div className="col-xs-6 col-sm-4"></div>
+       </div>
+       <div className="row">
+       <Question content="What is your favourite food?" />
        </div>
        <div className="row">
             <Map />

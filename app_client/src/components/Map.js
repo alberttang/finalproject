@@ -4,7 +4,7 @@ class Map extends Component {
     render() {
         const MY_API = 'AIzaSyBv2xBR-nJ3gso-Er5TV9RBhMBWNeuZYRU';
         let martialArt = "judo"
-        let location = "anchorage"
+        let location = ""
         let _url = `https://www.google.com/maps/embed/v1/search?key=${MY_API}&q=${martialArt}+near+${location}&zoom=12`
         
         return(<div>
