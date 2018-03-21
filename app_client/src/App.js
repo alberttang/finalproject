@@ -8,6 +8,8 @@ import Register from "./components/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Nav from "./components/Navbar";
 import Results from "./components/Results";
+import quizQuestions from './components/api/quizQuestions';
+
 
 
 class App extends Component {
@@ -28,6 +30,14 @@ class App extends Component {
      },
      result: ''
     };
+  }
+  componentWillMount() {
+    const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));  
+
+    this.setState({
+      question: quizQuestions[0].question,
+      answerOptions: shuffledAnswerOptions[0]
+    });
   }
 
   render() {
