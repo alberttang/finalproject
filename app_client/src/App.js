@@ -9,41 +9,23 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Nav from "./components/Navbar";
 import Results from "./components/Results";
 import quizQuestions from './components/api/quizQuestions';
+import update from 'react-addons-update';
+import Quiz from "./components/quiz/QuizBox";
+import Result from "./components/quiz/Result";
+import Footer from "./components/Footer";
+
 
 
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-     counter: 0,
-     questionId: 1,
-     question: '',
-     answerOptions: [],
-     answer: '',
-     answersCount: {
-       nintendo: 0,
-       microsoft: 0,
-       sony: 0
-     },
-     result: ''
-    };
-  }
-  componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));  
-
-    this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
-    });
-  }
-
+  
   render() {
     return (
       <div>
         <Nav />
+        
+      <div className="row">
         <Router>
           <div>
             <Route exact path="/"  component={Home}/>
@@ -53,7 +35,9 @@ class App extends Component {
             
           </div>
         </Router>
-      </div>
+        </div>
+        <Footer />
+        </div>
     );
   }
 }

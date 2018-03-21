@@ -3,6 +3,10 @@ import axios from "axios";
 import Quiz from "./Quiz";
 import Map from "./Map";
 import Question from './quiz/Questions';
+import QuizComponent from "./quiz/QuizQuestions";
+import HomeBody from "./HomeBody";
+import Navbar from "./Navbar";
+import Jumbotron from "./Jumbotron";
 
 // import GoogleMap from "./maps/GoogleMap";
 
@@ -24,20 +28,8 @@ class Home extends Component {
   render() {
     this.getBackendProtectedData();
     return (
-      <div className="container">
-       Home
-       <div className="row">
-            <div className="col-xs-6 col-sm-4"></div>
-            <div className="col-xs-6 col-sm-4"><Quiz/></div>
-            <div className="clearfix visible-xs-block"></div>
-            <div className="col-xs-6 col-sm-4"></div>
-       </div>
-       <div className="row">
-       <Question content="What is your favourite food?" />
-       </div>
-       <div className="row">
-            <Map />
-        </div>
+      <div>
+          <Jumbotron/>
       </div>
     );
   }
