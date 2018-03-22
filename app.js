@@ -9,6 +9,7 @@ const routes = require("./app_api/routes/index.routes");
 
 const PORT = process.env.PORT || 3001;
 
+
 app.use(express.static('app_client/build'))
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -16,10 +17,20 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(logger("dev"));
 
-mongoose.connect("mongodb://localhost/auth");
-// By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/auth";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {
+  useMongoClient: true
+});
+
+// mongoose.connect("mongodb://localhost/auth");
+// By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
+// Connect to the Mongo DB
+// mongoose.Promise = Promise;
 
 app.use(routes);
 
