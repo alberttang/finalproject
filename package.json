@@ -982,8 +982,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"git 
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
