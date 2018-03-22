@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import {Link} from "react-router-dom";
+
 
 class Login extends Component {
     constructor(props) {
@@ -34,9 +36,10 @@ class Login extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="container">
                 <form>
                     <div className="form-group">
+                    <h1> Please Login or <Link to={`/register`} style={{color:"blue"}}>Register</Link> to Continue</h1>
                         <label>Email</label>
                         <input className = "form-control" type="email" name="email" onChange={this.handleInputChange}/>
                     </div>

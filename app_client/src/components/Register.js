@@ -33,8 +33,9 @@ class Register extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="container">
                 <form>
+                    <h1> Register For An Account Below:</h1>
                     <div className="form-group">
                         <label>Email</label>
                         <input className = "form-control" type="email" name="email" onChange={this.handleInputChange}/>

@@ -140,7 +140,6 @@ body {
   /* background-image: url('images/ma-bg.png'); */
   background-size: cover;
   background-position: bottom center;
-  height: 75vh;
 }
 .jumbotron .col-md-2, .jumbotron .col-md-1, .jumbotron .col-md-3 {
   display: inline-block;

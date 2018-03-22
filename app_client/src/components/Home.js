@@ -8,7 +8,6 @@ import HomeBody from "./HomeBody";
 import Navbar from "./Navbar";
 import Jumbotron from "./Jumbotron";
 
-// import GoogleMap from "./maps/GoogleMap";
 
 class Home extends Component {
     getBackendProtectedData() {
@@ -18,21 +17,24 @@ class Home extends Component {
                 "Authorization": "Bearer " + window.localStorage.getItem("token")
             }
         })
-        .then(resp => {
-            console.log(resp);
-        })
-        .catch(err => {
-            console.error(err);
-        })
+            .then(resp => {
+                console.log(resp);
+            })
+            .catch(err => {
+                console.error(err);
+            })
     }
-  render() {
-    this.getBackendProtectedData();
-    return (
-      <div>
-          <Jumbotron/>
-      </div>
-    );
-  }
+    render() {
+        this.getBackendProtectedData();
+        return (
+            <div>
+                <Jumbotron />
+                
+<Map/>
+            </div>
+
+        );
+    }
 }
 
 export default Home;

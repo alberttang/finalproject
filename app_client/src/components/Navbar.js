@@ -11,14 +11,14 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">Home
+                <a className="nav-link" href="/">Martial Arts Finder
                   <span className="sr-only">(current)</span>
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">Link</a>
-              </li>
-              <li className="nav-item dropdown">
+              </li> */}
+              {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
                   Dropdown
@@ -29,11 +29,11 @@ class Navbar extends Component {
                   <div className="dropdown-divider"></div>
                   <a className="dropdown-item" href="#">Something else here</a>
                 </div>
-              </li>
+              </li> */}
              
             </ul>
-            <button className="btn btn-outline-info" type="button">
-              <i className="fas fa-user-circle"></i> Login</button>
+            {/* <button className="btn btn-outline-info" type="button">
+              <i className="fas fa-user-circle"></i> <a href="/login">Login</a></button> */}
           </div>
         </nav>
         )
