@@ -7,7 +7,7 @@ class Jumbotron extends Component {
         return (
 
             <div className="jumbotron jumbotron-fluid">
-                    <h1 className="display-4" style={{ textAlign: "center" }}>These Martial Arts are great for competition:</h1>
+                    <h1 className="display-4" style={{ textAlign: "center" }}>These Martial Arts are great for Self Defense:</h1>
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-md-3 col-xs-3">
